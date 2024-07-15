@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  color: var(--primary-color);
+}
+
+/* shared styles */
+:root {
+  --primary-color: #3a3a3a;
+  --font-family: poppins-regular;
+}
+/* navbar section style */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5.44rem;
+  margin-left: 7.5rem;
+  margin-right: 7.5rem;
+}
+
+.nav-links-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--primary-color);
+}
+.logo a {
+  text-decoration: none;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.nav-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-left: 2.1rem;
+}
+.nav-icon img {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+/* responsive styles for mobile devices */
+@media screen and (max-width: 768px) {
+  /* responsive navbar section */
+  nav {
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .nav-links-container {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .nav-icon {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-left: 0;
+    gap: 0.5rem;
+  }
+}
+
+/* responsive styles for tablet devices */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* responsive navbar section */
+  nav {
+    margin-top: 5.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
