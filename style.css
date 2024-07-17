@@ -135,6 +135,24 @@ nav {
 
 /* hero section style ends */
 
+/* featured section style starts */
+.featured-section-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 60px auto;
+  max-width: 1110px;
+}
+.featured-section-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.75rem;
+}
+
+/* featured section style ends */
+
 /* responsive styles for mobile devices */
 @media screen and (max-width: 768px) {
   /* responsive small - navbar section */
@@ -209,6 +227,14 @@ nav {
     align-items: flex-start;
     gap: 8px;
     margin: 14px auto;
+  }
+  /* responsive small - featured section icon  */
+  .featured-section-logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
   }
 }
 
