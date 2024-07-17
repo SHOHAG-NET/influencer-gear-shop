@@ -11,9 +11,9 @@
 /* shared styles */
 :root {
   --primary-color: #3a3a3a;
-  --font-family: poppins-regular;
+  --font-family: "Poppins", sans-serif;
 }
-/* navbar section style */
+/* navbar section style start */
 nav {
   display: flex;
   justify-content: space-between;
@@ -36,6 +36,12 @@ nav {
 }
 .logo a {
   text-decoration: none;
+}
+.ham-menu {
+  display: none;
+}
+.cart-icon {
+  display: none;
 }
 .nav-links {
   display: flex;
@@ -63,30 +69,146 @@ nav {
   height: 1.5rem;
   width: 1.5rem;
 }
+/* navbar section style ends */
+/* hero section style start */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3.138rem;
+}
+.hero-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-left: 7.5rem;
+}
+.hero-heading {
+  font-family: poppins;
+  font-weight: 700;
+  font-size: 3.25rem;
+  line-height: 4.375rem;
+}
+.hero-description {
+  font-family: poppins;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: normal;
+}
+.hero-btn {
+  text-decoration: none;
+  border: none;
+  border-radius: 41px;
+  background: #e02c6d;
+  display: inline-flex;
+  padding: 10px 24px;
+  align-items: flex-start;
+  gap: 8px;
+}
+.hero-btn-text {
+  color: #fff;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.hero-btn-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.hero-image-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 8.25rem;
+}
+.hero-image-1 {
+  position: relative;
+}
+.hero-image-2 {
+  position: absolute;
+}
+
+/* hero section style ends */
 
 /* responsive styles for mobile devices */
 @media screen and (max-width: 768px) {
-  /* responsive navbar section */
-  nav {
-    flex-direction: column;
-    margin-top: 2rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+  /* responsive small - navbar section */
+  .nav-bar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2.5rem auto;
   }
   .nav-links-container {
-    flex-direction: column;
-    margin-top: 2rem;
+    display: none;
   }
-  .nav-links {
-    flex-direction: column;
-    gap: 1rem;
+  .nav-bar > .logo {
+    font-size: 1.3rem;
   }
-  .nav-icon {
-    flex-direction: column;
+  .ham-menu {
+    display: inline;
+    height: 1rem;
+    width: 1rem;
+    order: -1;
+  }
+  .cart-icon {
+    display: inline;
+    height: 0.8rem;
+    width: 0.8rem;
+    /* order: -1; */
+  }
+  .nav-icon > .cart-icon {
+    display: inline;
+    height: 1.5rem;
+    width: 1.5rem;
+    color: var(--primary-color);
+  }
+  /* responsive small - hero section  */
+  .hero-section {
+    flex-direction: column-reverse;
+    justify-content: center;
     align-items: center;
-    margin-top: 1.5rem;
-    margin-left: 0;
-    gap: 0.5rem;
+  }
+  .hero-image-container {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
+  .hero-image-1 img {
+    width: 22rem;
+  }
+  .hero-image-2 img {
+    width: 22rem;
+  }
+  .hero-text-container {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
+  .hero-heading {
+    font-size: 28px;
+    line-height: normal;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hero-description {
+    text-align: center;
+    font-size: 14px;
+    line-height: normal;
+    /* margin: 10px; */
+  }
+  .hero-description br {
+    display: none;
+  }
+  .hero-btn {
+    display: inline-flex;
+    padding: 1rem 2rem;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 14px auto;
   }
 }
 
